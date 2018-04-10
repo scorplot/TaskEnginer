@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TaskEnginer_Example' do
+  pod 'TaskEnginer', :path => '../'
+
+  target 'TaskEnginer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

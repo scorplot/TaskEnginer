@@ -1,0 +1,6 @@
+framework module Pods_TaskEnginer_Example {
+  umbrella header "Pods-TaskEnginer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

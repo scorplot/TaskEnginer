@@ -1,0 +1,19 @@
+PODS:
+  - CircleReferenceCheck (0.0.1)
+  - TaskEnginer (1.0.0):
+    - CircleReferenceCheck
+
+DEPENDENCIES:
+  - TaskEnginer (from `../`)
+
+EXTERNAL SOURCES:
+  TaskEnginer:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CircleReferenceCheck: 5ef0dbaff301108a523f845bf81dfa9a12a83024
+  TaskEnginer: 1e43ca5dd622647270a1287c2b46b993f2ae9421
+
+PODFILE CHECKSUM: 0969e458813d241e77944e544f6d5143b962280f
+
+COCOAPODS: 1.4.0.rc.1

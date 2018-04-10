@@ -1,0 +1,23 @@
+{
+  "name": "TaskEnginer",
+  "version": "1.0.0",
+  "summary": "TaskEnginer is a split complex task into simple tasks",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "http://www.scorplot.com",
+  "authors": {
+    "aruisi": "scorplot@aliyun.com"
+  },
+  "source": {
+    "git": "https://github.com/scorplot/TaskEnginer.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TaskEnginer/Classes/**/*",
+  "dependencies": {
+    "CircleReferenceCheck": [
+
+    ]
+  }
+}
