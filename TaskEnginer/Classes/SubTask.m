@@ -41,7 +41,7 @@
     float _weight;
 }
 
--(Context*)context {
+-(id<NSObject>)context {
     return self.task.context;
 }
 

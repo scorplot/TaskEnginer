@@ -7,10 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class Context;
 @class TaskRoute;
 @interface SubTask : NSObject
-@property (nonatomic, strong, readonly) Context* context; // context
+@property (nonatomic, strong, readonly) id<NSObject> context; // context
 @property (nonatomic, weak, readonly) TaskRoute* task;
 @property (nonatomic, strong) id result; // result
 

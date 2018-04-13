@@ -1,15 +1,19 @@
 {
   "name": "TaskEnginer",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "summary": "TaskEnginer is a split complex task into simple tasks",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "TaskEnginer is a split complex task into simple tasks.",
   "homepage": "http://www.scorplot.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
   "authors": {
     "aruisi": "scorplot@aliyun.com"
   },
   "source": {
     "git": "https://github.com/scorplot/TaskEnginer.git",
-    "tag": "1.0.0"
+    "tag": "0.0.1"
   },
   "platforms": {
     "ios": "8.0"

@@ -127,7 +127,7 @@
     }
 }
 
--(instancetype)initWithSubTasks:(NSArray<SubTask*>*)subTasks context:(Context*)context{
+-(instancetype)initWithSubTasks:(NSArray<SubTask*>*)subTasks context:(id<NSObject>)context{
     self = [super init];
     if (self) {
         _context = context;
@@ -140,6 +140,11 @@
     }
     return self;
 }
+
+-(instancetype)initWithSingleTask:(SubTask*)subTask context:(id<NSObject>)context {
+    return [self initWithSubTasks:@[subTask] context:context];
+}
+
 //callback did start
 -(void)notifyDidStart:(int)tickCount {
     dispatch_queue_t queue = self.callbackQueue;
@@ -478,11 +483,20 @@
 // return empty array-->TaskRoute should be finished.
 // return non empty array-->subtasks which should be execute.
 -(NSArray<SubTask*>*)selectSubTask {
+    if (_subTasks.count == 1) { // if only single task just do it
+        SubTask* item = _subTasks[0];
+        if (item.finished)
+            return @[];
+        return _subTasks;
+    }
     return nil;
 }
 
 // When a subTask finished, this method will be called, sub class should gether information from subtask
 -(void)subSubTaskDidFinish:(SubTask*)item {
+    if (_subTasks.count == 1) { // if only single task just do it
+        self.result = item.result;
+    }
 }
 
 @end
