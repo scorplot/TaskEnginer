@@ -11,8 +11,9 @@
 @implementation SaveFileSubTask {
     NSString* _filePath;
     id _value;
+    BOOL _first;
 }
--(instancetype)initWithName:(NSString*)filePath value:(id)value {
+-(instancetype)initWithPath:(NSString*)filePath value:(id)value {
     self = [super init];
     if (self) {
         _filePath = [filePath copy];
@@ -41,8 +42,18 @@
     
 }
 
-#pragma mark sub class need to override
--(NSData*)serialization:(id)value {
+-(NSData*(^)(id))serialization {
+    if (_first == NO) {
+        _first = YES;
+        
+        if (_serialization == nil) {
+            _serialization = [self defaultSerialization];
+        }
+    }
+    return _serialization;
+}
+
+-(NSData*(^)(id))defaultSerialization {
     return nil;
 }
 

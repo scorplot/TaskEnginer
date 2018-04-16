@@ -9,7 +9,7 @@
 #import "SubTask.h"
 
 @interface LoadFileSubTask : SubTask
--(instancetype)initWithName:(NSString*)filePath;
-@property (nonatomic, copy) id (^parseData)(id obj);
+-(instancetype)initWithPath:(NSString*)filePath;
+@property (nonatomic, copy) id (^parseData)(NSData* data);
 
 @end

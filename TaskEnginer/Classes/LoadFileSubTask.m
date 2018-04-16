@@ -11,7 +11,7 @@
 @implementation LoadFileSubTask {
     NSString* _filePath;
 }
--(instancetype)initWithName:(NSString*)filePath {
+-(instancetype)initWithPath:(NSString*)filePath {
     self = [super init];
     if (self) {
         _filePath =  [filePath copy];
@@ -24,14 +24,9 @@
 -(void)doExecute:(void (^)(NSError* error))block {
     NSData* data = [NSData dataWithContentsOfFile:_filePath];
     id obj = nil;
-    if (data) {
-        obj = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    }
+    if (self.parseData)
+        obj = self.parseData(data);
     
-    if (obj) {
-        if (self.parseData)
-            obj = self.parseData(obj);
-    }
     self.result = obj;
     block(nil);
 }
