@@ -10,7 +10,8 @@
 
 @interface SaveFileSubTask : SubTask
 -(instancetype)initWithName:(NSString*)filePath value:(id)value;
+@property (nonatomic, copy) NSData*(^serialization)(id);
 
 #pragma mark sub class need to override
--(NSData*)serialization:(id)value;
+-(NSData*(^)(id))serialization;
 @end

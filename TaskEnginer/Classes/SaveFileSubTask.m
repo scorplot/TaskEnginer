@@ -23,7 +23,10 @@
 
 // 执行任务，需要重载入，此方法将在executingQueue队列中调用，结束的时候调用block，成功error是nil，失败是相应的错误
 -(void)doExecute:(void (^)(NSError* error))block {
-    NSData* data = [self serialization:_value];
+    NSData* data = nil;
+    if (_serialization) {
+        data = _serialization(_value);
+    }
     
     if (data) {
         [data writeToFile:_filePath atomically:YES];
