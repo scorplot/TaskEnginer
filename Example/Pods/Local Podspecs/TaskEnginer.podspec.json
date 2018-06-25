@@ -1,6 +1,6 @@
 {
   "name": "TaskEnginer",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "summary": "TaskEnginer is a split complex task into simple tasks",
   "description": "TaskEnginer is a split complex task into simple tasks.",
   "homepage": "http://www.scorplot.com",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/scorplot/TaskEnginer.git",
-    "tag": "0.0.1"
+    "tag": "0.0.7"
   },
   "platforms": {
     "ios": "8.0"

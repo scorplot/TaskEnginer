@@ -1,6 +1,6 @@
 PODS:
   - CircleReferenceCheck (0.0.1)
-  - TaskEnginer (0.0.1):
+  - TaskEnginer (0.0.7):
     - CircleReferenceCheck
 
 DEPENDENCIES:
@@ -12,8 +12,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CircleReferenceCheck: 5ef0dbaff301108a523f845bf81dfa9a12a83024
-  TaskEnginer: 648895c2d0a08b6b21b720ad2b83f34ceb5e0f89
+  TaskEnginer: 783bd29c7f471841b840d4a32f33da00ea503fb7
 
 PODFILE CHECKSUM: 0969e458813d241e77944e544f6d5143b962280f
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.4.0
