@@ -6,9 +6,13 @@ PODS:
 DEPENDENCIES:
   - TaskEnginer (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CircleReferenceCheck
+
 EXTERNAL SOURCES:
   TaskEnginer:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   CircleReferenceCheck: 5ef0dbaff301108a523f845bf81dfa9a12a83024
@@ -16,4 +20,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0969e458813d241e77944e544f6d5143b962280f
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
